@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_halaman_empat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Halaman 4"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_kerja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Tuliskan pekerjaanmu"
+        android:textColor="#808080"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/et_alamat"/>
+
+    <EditText
+        android:id="@+id/et_alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Tuliskan alamatmu"
+        android:textColor="#808080"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/et_usia"/>
+
+    <EditText
+        android:id="@+id/et_usia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Tuliskan usiamu"
+        android:textColor="#808080"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_fragment_four" />
+
+    <Button
+        android:id="@+id/btn_fragment_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to screen 3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_halaman_empat"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
