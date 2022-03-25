@@ -52,10 +52,26 @@ class FragmentFour : Fragment() {
         }
     }
 
+    private fun Intent(fragmentFour: FragmentFour, java: Class<FragmentThreeBinding>): Intent? {
+        TODO("Not yet implemented")
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+}
+
+private fun Intent?.putExtra(
+    data: String,
+    s: String,
+    usia: Int,
+    s1: String,
+    alamat: String,
+    s2: String,
+    pekerjaan: String
+) {
+    TODO("Not yet implemented")
 }
 
 //siapa yang suka melon ??
