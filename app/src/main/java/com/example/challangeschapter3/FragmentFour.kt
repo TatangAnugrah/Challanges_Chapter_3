@@ -1,6 +1,7 @@
 package com.example.challangeschapter3
 
 import android.app.Person
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -32,13 +33,14 @@ class FragmentFour : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnFragmentFour.setOnClickListener {
-            val usia = Integer.parseInt(binding.etUsia.text.toString())
-            fun cek():String{
-                return if(usia % 2 == 0){
-                    "usianya genap"
-                }else{
-                    "usianya ganjil"
-                }
+
+            if (binding.etAlamat.text.isNotEmpty() && binding.etKerja.text.isNotEmpty() && binding.etUsia.text.isNotEmpty()){
+
+                val alamat = binding.etAlamat.text.toString()
+                val pekerjaan = binding.etKerja.text.toString()
+                val usia = binding.etUsia.text.toString().toInt()
+
+                val data = Data(alamat, pekerjaan, usia)
             }
 
             findNavController().navigateUp()
