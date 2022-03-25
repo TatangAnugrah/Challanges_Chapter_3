@@ -15,6 +15,7 @@ class FragmentFour : Fragment() {
 
     companion object {
         val DATAEMPAT = "DATAEMPAT"
+        val Data = "data"
     }
 
     private var _binding: FragmentFourBinding? = null
@@ -41,6 +42,10 @@ class FragmentFour : Fragment() {
                 val usia = binding.etUsia.text.toString().toInt()
 
                 val data = Data(alamat, pekerjaan, usia)
+
+                val intent = Intent(this, FragmentThreeBinding::class.java)
+                intent.putExtra(Data, "usia", usia, "alamat", alamat, "pekerjaan", pekerjaan)
+                startActivity(intent)
             }
 
             findNavController().navigateUp()
